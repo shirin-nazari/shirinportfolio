@@ -2,33 +2,31 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Logo from '@/public/logo-shirin-original.png';
-import Light from '@/public/lightmode.png';
-import Moon from '@/public/darkmode.png';
+import { useTheme } from '@/context/ThemeProvider';
+import Light from '@/public/sun.svg';
+import Moon from '@/public/moon.svg';
 const Navbar = () => {
-  const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-  };
+  const { darkMode, toggleDarkMode } = useTheme();
+
   return (
-    <nav className="flex justify-evenly w-full backdrop-blur-lg h-20 items-center fixed">
+    <nav className="flex justify-evenly w-full backdrop-blur-lg h-20 items-center fixed p-2">
       <Image src={Logo} alt="logo-shirin" className="w-25 h-12" />
-      <ul className="flex justify-evenly w-sm font-bold text-lg dark:text-white-bg ">
-        <li className="hover:text-brand-dark hover:text-xl">Home</li>
-        <li className="hover:text-brand-dark hover:text-xl">About us</li>
-        <li className="hover:text-brand-dark hover:text-xl">Project</li>
-        <li className="hover:text-brand-dark hover:text-xl">Contact</li>
-        <button className="bg-primary" onClick={toggleTheme}>
-          <Image
-            src={theme === 'light' ? Moon : Light}
-            alt="light"
-            className="w-10 h-10"
-          />
-        </button>
+      <ul className="flex justify-evenly w-xl font-bold text-sm text-dark-mode  dark:text-white-bg ">
+        <li className="cursor-pointer hover:text-brand-dark ">Home</li>
+        <li className="cursor-pointer hover:text-green-light">About us</li>
+        <li className="cursor-pointer hover:text-brand-dark ">Project</li>
+        <li className="cursor-pointer hover:text-green-light">Contact</li>
       </ul>
       {/* btn-[#FEA405} text-white font-bold */}
-      <button className="bg-warning p-2 text-white font-bold rounded">
+
+      <button onClick={toggleDarkMode} className="">
+        <Image
+          src={darkMode ? Light : Moon}
+          alt="light"
+          className="w-10 h-8 transition delay-500 duration-400 ease-in-out cursor-pointer"
+        />
+      </button>
+      <button className="bg-warning p-2 text-white font-bold rounded cursor-pointer">
         Download Cv
       </button>
     </nav>
