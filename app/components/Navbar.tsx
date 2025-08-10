@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from '@/public/logo-shirin-original.png';
 import { useTheme } from '@/context/ThemeProvider';
 import Light from '@/public/sun.svg';
@@ -17,7 +17,6 @@ const Navbar = () => {
         <li className="cursor-pointer hover:text-brand-dark ">Project</li>
         <li className="cursor-pointer hover:text-green-light">Contact</li>
       </ul>
-      {/* btn-[#FEA405} text-white font-bold */}
 
       <button onClick={toggleDarkMode} className="">
         <Image

@@ -22,6 +22,9 @@
   --color-dark-mode: #1e1e1e;
   --color-primary-50: #79a25c;
   --color-white-500: #e0e0e0;
+--font-inter:inter,sans-serif;
+--font-poppins:poppins,sans-serif;
+
 }
 @layer base {
   [data-theme='light'] {
