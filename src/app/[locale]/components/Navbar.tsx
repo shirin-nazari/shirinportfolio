@@ -7,8 +7,13 @@ import { useTheme } from '@/context/ThemeProvider';
 import Light from '@/public/sun.svg';
 import Moon from '@/public/moon.svg';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useLocale } from 'next-intl';
+
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useTheme();
+  const pathname = usePathname();
+  const currentLocale = useLocale();
 
   return (
     <nav className="flex justify-evenly w-full backdrop-blur-lg h-20 items-center fixed p-2">
@@ -16,36 +21,52 @@ const Navbar = () => {
         <Image src={Logo} alt="logo-shirin" className="w-25 h-12" />
       </Link>
       <select
-        name="language"
+        name="locale"
         id="language"
         className="bg-white-500 border-none rounded-lg p-2 outline-none"
       >
-        <option value="en" className="rounded-lg p-2">
-          English
-        </option>
-        <option value="fa" className="rounded-lg p-2">
-          فارسی
-        </option>
+        <Link href="\" locale="en" passHref>
+          <option value="en" className="rounded-lg p-2">
+            English
+          </option>
+        </Link>
+        <Link href="\" locale="fa" passHref>
+          <option value="fa" className="rounded-lg p-2">
+            فارسی
+          </option>
+        </Link>
       </select>
       <ul className="flex justify-evenly w-sm font-bold text-sm text-dark-mode  dark:text-white-bg ">
-        <motion.li whileHover={{ color: '#667d4f' }} className="cursor-pointer">
-          <Link href="/">Home</Link>
-        </motion.li>
-        <motion.li whileHover={{ color: '#667d4f' }} className="cursor-pointer">
-          <Link href="/about-us">About us</Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ color: '#667d4f' }}
-          className="cursor-pointer "
-        >
-          <Link href="/project">Project</Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ color: '#667d4f' }}
-          className="cursor-pointer "
-        >
-          <Link href="/contact">Contact</Link>
-        </motion.li>
+        <li>
+          <Link href="/" className=" cursor-pointer hover:text-brand-dark-logo">
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            href="/about-us"
+            className="cursor-pointer  hover:text-brand-dark-logo"
+          >
+            About us
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/project"
+            className="cursor-pointer  hover:text-brand-dark-logo"
+          >
+            Project
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/contact"
+            className="cursor-pointer  hover:text-brand-dark-logo "
+          >
+            Contact
+          </Link>
+        </li>
         {/* <li className="cursor-pointer hover:text-brand-dark"></li>
         <li className="cursor-pointer hover:text-green-light">About us</li>
         <li className="cursor-pointer hover:text-brand-dark ">Project</li>
