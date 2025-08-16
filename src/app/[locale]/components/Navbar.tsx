@@ -7,14 +7,20 @@ import { useTheme } from '@/context/ThemeProvider';
 import Light from '@/public/sun.svg';
 import Moon from '@/public/moon.svg';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useRouter, usePathname } from '@/src/i18n/navigation';
+import { useTransition } from 'react';
 
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useTheme();
+  const router = useRouter();
   const pathname = usePathname();
-  const currentLocale = useLocale();
-
+  const [isPending, startTransition] = useTransition();
+  function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    const locale = e.target.value;
+    startTransition(() => {
+      router.replace({ pathname }, { locale });
+    });
+  }
   return (
     <nav className="flex justify-evenly w-full backdrop-blur-lg h-20 items-center fixed p-2">
       <Link href="/">
@@ -22,19 +28,19 @@ const Navbar = () => {
       </Link>
       <select
         name="locale"
+        onChange={onChange}
+        // defaultValue={pathname.startsWith('/fa'?'fa':'en')}
         id="language"
+        disabled={isPending}
         className="bg-white-500 border-none rounded-lg p-2 outline-none"
       >
-        <Link href="\" locale="en" passHref>
-          <option value="en" className="rounded-lg p-2">
-            English
-          </option>
-        </Link>
-        <Link href="\" locale="fa" passHref>
-          <option value="fa" className="rounded-lg p-2">
-            فارسی
-          </option>
-        </Link>
+        <option value="en" className="rounded-lg p-2">
+          English
+        </option>
+
+        <option value="fa" className="rounded-lg p-2">
+          فارسی
+        </option>
       </select>
       <ul className="flex justify-evenly w-sm font-bold text-sm text-dark-mode  dark:text-white-bg ">
         <li>
