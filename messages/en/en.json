@@ -1,4 +1,10 @@
 {
+  "navBar": {
+    "home": "Home",
+    "about-me": "About me",
+    "project": "Project",
+    "contact": "Contact"
+  },
   "homePage": {
     "title": "Welcome to my portfolio(:",
     "description": "Im a  frontEnd Developer "
