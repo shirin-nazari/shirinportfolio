@@ -3,7 +3,9 @@
     "home": "خانه",
     "about-me": "درباره من",
     "project": "پروژه ",
-    "contact": "ارتباط با من"
+    "contact": "ارتباط با من",
+    "darkMode": "حالت شب",
+    "lightMode": "حالت روز"
   },
   "homePage": {
     "title": "به پورتفولیو من خوش امدید",

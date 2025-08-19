@@ -3,7 +3,9 @@
     "home": "Home",
     "about-me": "About me",
     "project": "Project",
-    "contact": "Contact"
+    "contact": "Contact",
+    "darkMode": "DarkMode",
+    "lightMode": "LightMode"
   },
   "homePage": {
     "title": "Welcome to my portfolio(:",

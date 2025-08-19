@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Navbar from '@/src/app/[locale]/components/Navbar';
+import Navbar from '@/src/app/[locale]/components/Navbar/Navbar';
 import { ThemeProvider } from '@/context/ThemeProvider';
 import './globals.css';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
