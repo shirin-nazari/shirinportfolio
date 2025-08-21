@@ -11,7 +11,7 @@ const NavLinks = () => {
     { href: '/contact', label: t('contact') },
   ];
   return (
-    <ul className="flex justify-evenly w-sm font-bold text-sm text-dark-mode  dark:text-white-bg ">
+    <ul className="flex justify-evenly w-sm font-bold text-sm items-center text-dark-mode  dark:text-white-bg ">
       {links.map((link) => (
         <li key={link.href}>
           <Link

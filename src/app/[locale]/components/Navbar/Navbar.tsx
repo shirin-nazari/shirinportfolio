@@ -22,7 +22,7 @@ const Navbar = () => {
       </Link>
       {/* desktop design*/}
       <div className="hidden md:flex justify-evenly basis-2/3 ">
-        <LanguageSwitcher />
+        <LanguageSwitcher className="bg-white-500 " />
         <NavLinks />
         <ThemeToggle />
         <button className="bg-warning p-2 text-white-bg font-bold rounded cursor-pointer mx-1">
@@ -30,14 +30,14 @@ const Navbar = () => {
         </button>
       </div>
       {/* Mobile Menu Toggle */}
-      <div className="md:hidden">
+      <div className="md:hidden text-dark-mode  dark:text-white-bg">
         <button onClick={toggleMenu}>
           {isOpenMenu ? <FaTimes /> : <FaBars />}
         </button>
       </div>
       {/* mobile Design */}
       {isOpenMenu && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg p-4">
+        <div className="md:hidden absolute top-full left-0 w-full h-full bg-primary-50  p-4">
           <MobileNavbar />
         </div>
       )}

@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import { useRouter, usePathname } from '@/src/i18n/navigation';
 import { useTransition } from 'react';
 
-const LanguageSwitcher = () => {
+interface ClassNameProps {
+  className?: string;
+  classNameChild?: string;
+}
+const LanguageSwitcher = ({ className, classNameChild }: ClassNameProps) => {
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
@@ -25,9 +29,12 @@ const LanguageSwitcher = () => {
       // value={selected}
       id="language"
       disabled={isPending}
-      className="bg-white-500 border-none rounded-lg p-2 outline-none"
+      className={`border-none rounded-lg p-2 outline-none ${className}`}
     >
-      <option value="en" className="rounded-lg p-2">
+      <option
+        value="en"
+        className={`rounded-lg p-2 bg-transparent ${classNameChild}`}
+      >
         English
       </option>
 
