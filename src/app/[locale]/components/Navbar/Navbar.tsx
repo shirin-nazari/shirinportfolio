@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-row justify-evenly w-full backdrop-blur-lg h-20 items-center fixed p-2">
+    <nav className="flex flex-row justify-between md:justify-evenly w-full backdrop-blur-lg h-20 items-center fixed px-6 p-2 md:p-2">
       <Link href="/">
         <Image src={Logo} alt="logo-shirin" className="w-25 h-12" />
       </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
       </div>
       {/* mobile Design */}
       {isOpenMenu && (
-        <div className="md:hidden absolute top-full left-0 w-full h-full bg-primary-50  p-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-primary-50  p-4">
           <MobileNavbar />
         </div>
       )}
