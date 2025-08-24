@@ -20,7 +20,7 @@ const MobileNavbar = () => {
   ];
 
   return (
-    <div className="h-full w-full flex flex-col ">
+    <div className=" flex flex-col p-2">
       <ul className="w-full font-bold text-sm text-dark-mode  dark:text-white-bg ">
         {links.map((link) => (
           <li key={link.href} className="p-2">
@@ -39,7 +39,7 @@ const MobileNavbar = () => {
           classNameChild=" text-dark-mode bg-primary-50"
         />
       </div>
-      <div className="flex p-4">
+      <div className="flex p-2">
         <Image
           onClick={toggleDarkMode}
           src={darkMode ? Light : Moon}

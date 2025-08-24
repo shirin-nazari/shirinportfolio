@@ -37,7 +37,7 @@ const Navbar = () => {
       </div>
       {/* mobile Design */}
       {isOpenMenu && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-primary-50  p-4">
+        <div className="md:hidden absolute top-full left-0 w-full min-h-5/6 bg-primary-50  p-4">
           <MobileNavbar />
         </div>
       )}
