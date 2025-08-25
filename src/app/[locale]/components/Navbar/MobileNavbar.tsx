@@ -35,7 +35,7 @@ const MobileNavbar = () => {
       </ul>
       <div className="w-6/12 p-2">
         <LanguageSwitcher
-          className="bg-transparent border-none outline-none text-white-bg font-bold text-sm w-full"
+          className="bg-transparent border-none outline-none font-bold text-sm w-full"
           classNameChild=" text-dark-mode bg-primary-50"
         />
       </div>
