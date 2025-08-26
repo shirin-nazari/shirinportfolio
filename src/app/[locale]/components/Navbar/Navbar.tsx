@@ -2,12 +2,12 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Logo from '@/public/logo-shirin-original.png';
-import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
 import NavLinks from './NavLinks';
 import ThemeToggle from './ThemeToggle';
 import MobileNavbar from './MobileNavbar';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
@@ -25,9 +25,13 @@ const Navbar = () => {
         <LanguageSwitcher className="bg-white-500 " />
         <NavLinks />
         <ThemeToggle />
-        <button className="bg-warning p-2 text-white-bg font-bold rounded cursor-pointer mx-1">
+        <Link
+          href="/cv.pdf"
+          download="cv-shirin-nazari"
+          className="bg-warning p-2 text-white-bg font-bold rounded-lg cursor-pointer mx-1"
+        >
           Download Cv
-        </button>
+        </Link>
       </div>
       {/* Mobile Menu Toggle */}
       <div className="md:hidden text-dark-mode  dark:text-white-bg">

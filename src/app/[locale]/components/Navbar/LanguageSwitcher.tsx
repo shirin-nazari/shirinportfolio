@@ -29,8 +29,8 @@ const LanguageSwitcher = ({ className, classNameChild }: ClassNameProps) => {
       // value={selected}
       id="language"
       disabled={isPending}
-      // className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-green-light dark:bg-dark-mode  dark:placeholder-gray-400 dark:text-white-bg dark:focus:ring-green-light `}
-      className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-transparent dark:bg-transparent  dark:placeholder-gray-400 dark:text-white-bg  dark:focus:ring-green-light `}
+      className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-green-light dark:bg-dark-mode  dark:placeholder-gray-400 dark:text-white-bg dark:focus:ring-green-light `}
+      // className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-transparent dark:bg-transparent  dark:placeholder-gray-400 dark:text-white-bg  dark:focus:ring-green-light `}
     >
       <option
         value="en"
