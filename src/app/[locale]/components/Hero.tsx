@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 // import shirin from '@/public/shirin-nazari-bg.jpg';
 import shirin from '@/public/shirin-nazari.png';
+import SocialMedia from './SocialMedia';
 
 export const Hero = () => {
   const t = useTranslations('homePage');
@@ -18,19 +19,22 @@ export const Hero = () => {
         </h2>
         <p className="font-semibold w-lg">{t('description')}</p>
       </div>
-      <div className="w-fit h-lg rounded-full bg-gradient-to-r from-warning to-logo ">
-        <div className="bg-white-bg w-sm h-sm rounded-full m-2 dark:bg-dark-mode">
-          <Image
-            alt="profile"
-            src={shirin}
-            className="h-xl w-sm  rounded-full z-20"
-          />
-        </div>
-        {/* <Image
+      <div className="h-full flex flex-col space-y-4">
+        <div className="w-fit h-lg rounded-full bg-gradient-to-r from-warning to-logo ">
+          <div className="bg-white-bg w-sm h-fit rounded-full m-2 dark:bg-dark-mode">
+            <Image
+              alt="profile"
+              src={shirin}
+              className="h-sm w-sm  rounded-full z-20"
+            />
+          </div>
+          {/* <Image
           alt="profile"
           src={shirin}
           className="h-sm w-sm  rounded-full p-2"
         /> */}
+        </div>
+        <SocialMedia />
       </div>
     </div>
   );
