@@ -1,11 +1,9 @@
 import { useTheme } from '@/context/ThemeProvider';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import React, { useTransition } from 'react';
 import Light from '@/public/sun.svg';
 import Moon from '@/public/moon.svg';
 import Image from 'next/image';
-import { usePathname, useRouter } from '@/src/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const MobileNavbar = () => {
