@@ -6,6 +6,7 @@ import './globals.css';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { routing } from '@/src/i18n/routing';
 import { notFound } from 'next/navigation';
+import { getLocale } from 'next-intl/server';
 const geistSans = Inter({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -28,8 +29,10 @@ export default async function localeLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  const localeRTL = await getLocale();
+  const direction = localeRTL === 'en' ? 'ltr' : 'rtl';
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={direction}>
       <body className={`${geistSans.variable} dark:bg-dark-mode`}>
         <NextIntlClientProvider>
           <ThemeProvider>
