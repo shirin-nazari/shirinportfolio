@@ -11,5 +11,10 @@
     "name": "SHIRIN NAZARI",
     "title": "Front-End Developer",
     "description": "A dynamic and passionate Front-End Developer with a strong enthusiasm for problem-solving and continuous learning.\nFocused on building user-friendly and efficient web applications."
+  },
+  "experience": {
+    "nameAndJob": " AP Signals – London, UK Mentor Assistant & Support",
+    "time": "Sept 2021 – June2022",
+    "working": " Students were asked weekly about their progress and upcoming learning goals.\nSupport was provided in reviewing concepts and answering questions.\nWhen technical issues arose, efforts were made to connect learners with mentors or resources for solutions.\nExtra help was offered to ensure learners stayed on track in their programming journey."
   }
 }

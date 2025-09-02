@@ -14,7 +14,7 @@ import { SiNextdotjs, SiRedux, SiTypescript } from 'react-icons/si';
 
 function Skills() {
   return (
-    <div className="h-lvh w-full bg-green-light">
+    <div className="h-lvh w-full">
       <SiNextdotjs />
       <FaReact />
       <FaGitAlt />

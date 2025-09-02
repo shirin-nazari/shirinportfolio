@@ -25,9 +25,9 @@ export const Hero = () => {
         >
           {title[1]}
         </h2>
-        <p className="font-semibold w-fit md:w-lg text-justify ">
+        <div className="font-semibold w-fit md:w-lg text-justify ">
           {t('description')}
-        </p>
+        </div>
       </div>
       <div className="h-full flex flex-col items-center justify-center  space-y-4">
         <div className="w-fit h-lg rounded-full bg-gradient-to-r from-warning to-logo">
