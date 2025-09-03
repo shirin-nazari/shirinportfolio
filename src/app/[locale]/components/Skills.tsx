@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-
+import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 
 function Skills() {
@@ -20,8 +20,21 @@ function Skills() {
   ];
   const loop = [...items, ...items];
   return (
-    <div className="flex size-full items-center justify-center bg-background">
-      skills
+    <div className="">
+      <h4>skills</h4>
+      <div className="flex size-full items-center justify-center bg-background gap-10">
+        <Marquee className="w-full h-full">
+          {loop.map((item, index) => (
+            <Image
+              src={item.src}
+              alt={item.alt}
+              key={index}
+              width={100}
+              height={100}
+            />
+          ))}
+        </Marquee>
+      </div>
     </div>
   );
 }
