@@ -1,10 +1,6 @@
 @import 'tailwindcss';
+@import "tw-animate-css";
 @custom-variant dark (&:where(.dark, .dark *));
-
-:root {
-  --background:var(--color-dark-mode)
-  --foreground: var(--color-white-bg);
-}
 
 @theme inline {
   /* color */
@@ -45,7 +41,7 @@
   --text-4xl--line-height: calc(2.50/ 3.056);
    --text-5xl:3.833rem;
   --text-5xl--line-height: calc(2.75 / 3.833);
-
+  
 }
 @layer base {
   [data-theme='light'] {
@@ -55,10 +51,26 @@
     background-color: var(--color-dark-mode);
   }
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background:#1e1e1e;
-    --foreground:  #fffff0;
-  }
+
+.ticker{
+  position: relative;
+}
+.ticker__track{
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  width: max-content;
+  animation:scroll var(--dur,28s) linear infinite;
+}
+.ticker__item{list-style: none;}
+.group:hover .ticker__track{
+  animation-play-state: paused;
+}
+@keyframes scroll{
+  from {transform: translateX(0);}
+  to {transform: translateX(-50%);}
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track{animation: none;}
 }
 

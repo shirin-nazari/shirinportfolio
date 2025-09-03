@@ -14,7 +14,7 @@ export const Hero = () => {
 
   return (
     <div className="flex items-center w-full min-h-lvh justify-center space-x-2 md:space-x-11 flex-wrap-reverse ">
-      <div className="w-fit ">
+      <div className="w-fit p-8 md:px-2">
         {' '}
         <h2 className="text-secondary font-bold">{t('name')}</h2>
         <h1 className="font-bold text-3xl pb-2 text-logo">{title[0]}</h1>
