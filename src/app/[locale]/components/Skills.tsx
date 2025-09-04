@@ -20,17 +20,19 @@ function Skills() {
   ];
   const loop = [...items, ...items];
   return (
-    <div className="">
-      <h4>skills</h4>
-      <div className="flex size-full items-center justify-center bg-background gap-10">
-        <Marquee className="w-full h-full">
+    <div className=" w-full bg-white-500/90 flex flex-col items-center py-12">
+      <h4 className="font-bold text-logo text-2xl pb-10">SKILLS</h4>
+
+      <div className="flex size-full items-center justify-center gap-10">
+        <Marquee className="w-full h-full backdrop-blur-3xl gap-4">
           {loop.map((item, index) => (
             <Image
               src={item.src}
               alt={item.alt}
               key={index}
-              width={100}
-              height={100}
+              width={90}
+              height={90}
+              className="px-2"
             />
           ))}
         </Marquee>

@@ -8,7 +8,7 @@ const Experience = () => {
     .split('.')
     .filter((item) => item.trim() !== '');
   return (
-    <div className="h-full bg-green-light/70 w-full py-20 flex flex-col items-center ">
+    <div className="h-full w-full bg-green-light/70  py-20 flex flex-col items-center ">
       <motion.h2
         initial={{ visibility: 'hidden' }}
         animate={{ visibility: 'visible' }}
