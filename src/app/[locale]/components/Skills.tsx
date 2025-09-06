@@ -27,7 +27,10 @@ function Skills() {
       <h4 className="font-bold text-secondary text-2xl pb-10">{t('name')}</h4>
 
       <div className="flex size-full items-center justify-center gap-10 backdrop-blur-3xl bg-secondary/4">
-        <Marquee className="w-full h-full gap-4 z-10">
+        <Marquee
+          direction="left"
+          className="w-full h-full gap-4 z-10 [direction:ltr]"
+        >
           {loop.map((item, index) => (
             <Image
               src={item.src}

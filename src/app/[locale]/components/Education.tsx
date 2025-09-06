@@ -15,7 +15,6 @@ const Education = () => {
       description: t('apisinals.description'),
     },
   ];
-  console.log(items);
   return (
     <div className="h-full py-20 w-[80%] flex items-center justify-center space-x-16 flex-wrap md:flex-nowrap">
       <h4 className="font-bold text-2xl pb-10 md:pb-0">{t('name')}</h4>

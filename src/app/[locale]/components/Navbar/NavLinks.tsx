@@ -6,7 +6,7 @@ const NavLinks = () => {
   const t = useTranslations('navBar');
   const links = [
     { href: '/', label: t('home') },
-    { href: '/about-me', label: t('about-me') },
+    { href: '/', label: t('about-me') },
     { href: '/project', label: t('project') },
     { href: '/contact', label: t('contact') },
   ];
