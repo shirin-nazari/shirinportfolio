@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-row justify-between md:justify-evenly w-full bg-brand-dark-logo md:bg-transparent md:backdrop-blur-lg h-20 items-center fixed px-6 p-2 md:p-2">
+    <nav className="flex flex-row justify-between md:justify-evenly w-full bg-brand-dark-logo md:bg-transparent md:backdrop-blur-lg h-20 items-center fixed px-6 p-2 md:p-2 z-50">
       <Link href="/">
         <Image src={Logo} alt="logo-shirin" className="w-25 h-12" />
       </Link>

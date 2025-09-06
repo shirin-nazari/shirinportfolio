@@ -2,8 +2,10 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 function Skills() {
+  const t = useTranslations('Skills');
   const items = [
     { src: '/icons/html.png', alt: 'html' },
     { src: '/icons/css.png', alt: 'css' },
@@ -20,11 +22,12 @@ function Skills() {
   ];
   const loop = [...items, ...items];
   return (
-    <div className=" w-full bg-white-500/90 flex flex-col items-center py-12">
-      <h4 className="font-bold text-logo text-2xl pb-10">SKILLS</h4>
+    // <div className=" w-full bg-white-500/90 flex flex-col items-center py-12">
+    <div className=" w-full flex flex-col items-center py-12">
+      <h4 className="font-bold text-secondary text-2xl pb-10">{t('name')}</h4>
 
-      <div className="flex size-full items-center justify-center gap-10">
-        <Marquee className="w-full h-full backdrop-blur-3xl gap-4">
+      <div className="flex size-full items-center justify-center gap-10 backdrop-blur-3xl bg-secondary/4">
+        <Marquee className="w-full h-full gap-4 z-10">
           {loop.map((item, index) => (
             <Image
               src={item.src}

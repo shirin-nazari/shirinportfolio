@@ -14,7 +14,7 @@ const Experience = () => {
         animate={{ visibility: 'visible' }}
         className="font-bold text-2xl text-brand-dark-logo"
       >
-        Experience
+        {t('name')}
       </motion.h2>
       <div className=" pt-10 ">
         <div className="flex justify-between items-center flex-wrap">
