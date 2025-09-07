@@ -22,7 +22,6 @@ function Skills() {
   ];
   const loop = [...items, ...items];
   return (
-    // <div className=" w-full bg-white-500/90 flex flex-col items-center py-12">
     <div className=" w-full flex flex-col items-center py-12">
       <h4 className="font-bold text-secondary text-2xl pb-10">{t('name')}</h4>
 
@@ -36,9 +35,9 @@ function Skills() {
               src={item.src}
               alt={item.alt}
               key={index}
-              width={90}
-              height={90}
-              className="px-2"
+              width={100}
+              height={100}
+              className="px-4 "
             />
           ))}
         </Marquee>
