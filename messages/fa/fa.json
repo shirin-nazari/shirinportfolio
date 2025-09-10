@@ -34,5 +34,23 @@
       "time": "ژانویه 2020 – اوت 2021",
       "description": "یک دوره ۹ ماهه جامع در زمینه توسعه وب با هدف ارتقای مهارت دانشجویان برای تبدیل شدن به توسعه‌دهندگان فول‌استک حرفه‌ای و همچنین فراهم کردن تجربه کاری در بخش پیشرفته. \nمهارت‌های فنی آموخته‌شده: HTML، CSS، JavaScript، React، Node.js، Express.js، MongoDB"
     }
+  },
+  "Projects": {
+    "name": "پروژه ها",
+    "movie": {
+      "title": "movies",
+      "description": " پیاده سازی با : React , Redux Toolkit, JavaScript , React Router , Axios , TailwindCss",
+      "link": "https://movies-theta-five.vercel.app/"
+    },
+    "game": {
+      "title": "game-hub",
+      "description": " پیاده سازی با : React , TypeScript , Zustand , React Query , Axios , React Router, Framer Motion , Chakra UI",
+      "link": "https://game-hub-five-cyan.vercel.app/"
+    },
+    "gym": {
+      "title": "evogym",
+      "description": "پیاده سازی با : React , TypeScript , TailwindCss , Framer Motion , React Hook",
+      "link": "https://gym-typescript-ten-henna.vercel.app/"
+    }
   }
 }

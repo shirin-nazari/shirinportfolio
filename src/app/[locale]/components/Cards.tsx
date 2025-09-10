@@ -11,7 +11,7 @@ interface PropsCard {
 
 const Cards = ({ children, src, title, href }: PropsCard) => {
   return (
-    <div className="max-w-sm rounded-2xl overflow-hidden blur-in-3xl shadow-lg">
+    <div className="max-w-sm h-full rounded-2xl overflow-hidden blur-in-3xl shadow-lg">
       <Image
         className="w-full h-fit rounded-2xl"
         src={src}
@@ -20,7 +20,11 @@ const Cards = ({ children, src, title, href }: PropsCard) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className=" text-base">{children}</p>
-        <Link href={href} target="_blank" className="text-primary text-lg">
+        <Link
+          href={href}
+          target="_blank"
+          className="text-primary text-lg font-bold"
+        >
           {title}
         </Link>
       </div>
