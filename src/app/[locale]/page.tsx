@@ -1,4 +1,5 @@
 import Education from './components/Education';
+import EmailTemplate from './components/EmailTemplate';
 import Experience from './components/Experience';
 import { Hero } from './components/Hero';
 import Projects from './components/Projects';
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
       <Education />
       <Projects />
+      <EmailTemplate />
     </div>
   );
 }
