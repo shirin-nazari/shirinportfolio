@@ -6,10 +6,11 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, message } = body;
     const data = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      // from: 'Acme <onboarding@resend.dev>',
+      from: 'Portfolio <onboarding@resend.dev>',
       to: 'shirinnazari.h@gmail.com',
       subject: `new message from ${name}`,
-      html: `<p>Email:${email}</p><p>Message: ${message} </p>`,
+      html: `<p>${name}</p><p>Email:${email}</p><p>Message: ${message} </p>`,
     });
     return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
