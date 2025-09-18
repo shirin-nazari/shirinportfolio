@@ -1,7 +1,12 @@
 'use client';
+import { useTranslations } from 'next-intl';
 import React, { FormEvent, useState } from 'react';
+import SocialMedia from './SocialMedia';
+import Link from 'next/link';
+import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
 
 const EmailTemplate = () => {
+  const t = useTranslations('Contact');
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'success' | 'error' | null>(null);
   const handleSubmit = async (e: FormEvent) => {
@@ -25,13 +30,49 @@ const EmailTemplate = () => {
     else setStatus('error');
   };
   return (
-    <div className="w-full h-full mx-auto py-20 flex flex-col items-center space-y-16">
-      <h4 className="font-bold text-2xl">Contact Me</h4>
-      <div className="w-full flex justify-between">
-        <div></div>
+    <div className="w-full h-full  py-20 flex flex-col items-center space-y-16 flex-wrap md:flex-nowrap">
+      <h4 className="font-bold text-2xl">{t('name')}</h4>
+      <div className="w-full h-full flex justify-evenly flex-wrap md:flex-nowrap">
+        <div className="w-lg">
+          <p className="font-semibold">{t('description')}</p>
+          <div className="flex flex-col gap-4 py-2">
+            <Link
+              href="https://www.instagram.com/shirin._.nh/#"
+              target="_blank"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+            >
+              <FaInstagram className="w-6 h-6 text-logo" />
+              shirin._.nh
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/shirin-nazari/"
+              target="_blank"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+            >
+              <FaLinkedin className="w-6 h-6 text-logo" />
+              shirin-nazari
+            </Link>
+            <Link
+              href="https://github.com/shirin-nazari"
+              target="_blank"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+            >
+              <FaGithub className="w-6 h-6 text-logo" />
+              shirin-nazari
+            </Link>
+            <Link
+              href="https://t.me/shirin_nh80"
+              target="_blank"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+            >
+              <FaTelegram className="w-6 h-6 text-logo" />
+              shirin_nh8
+            </Link>
+          </div>
+        </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 max-w-lg mx-auto bg-gradient-to-r from-secondary/10 to-logo/10 rounded-2xl w-full p-12"
+          className="flex flex-col gap-4 max-w-lg  bg-gradient-to-r from-secondary/10 to-logo/10 rounded-2xl w-full p-12"
         >
           <input
             type="text"

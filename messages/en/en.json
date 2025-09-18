@@ -51,5 +51,9 @@
       "description": "Built with : React , TypeScript , TailwindCss , Framer Motion , React Hook",
       "link": "https://gym-typescript-ten-henna.vercel.app/"
     }
+  },
+  "Contact": {
+    "name": "Contact Me",
+    "description": "Feel free to reach out via the form below or connect with me on other platforms"
   }
 }
