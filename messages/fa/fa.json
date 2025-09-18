@@ -52,5 +52,9 @@
       "description": "پیاده سازی با : React , TypeScript , TailwindCss , Framer Motion , React Hook",
       "link": "https://gym-typescript-ten-henna.vercel.app/"
     }
+  },
+  "Contact": {
+    "name": "ارتباط با من",
+    "description": "از طریق فرم می‌توانید با من در ارتباط باشید یا در پلتفرم‌های دیگر به من وصل شوید"
   }
 }

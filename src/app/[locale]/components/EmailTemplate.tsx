@@ -4,6 +4,7 @@ import React, { FormEvent, useState } from 'react';
 import SocialMedia from './SocialMedia';
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 
 const EmailTemplate = () => {
   const t = useTranslations('Contact');
@@ -68,30 +69,38 @@ const EmailTemplate = () => {
               <FaTelegram className="w-6 h-6 text-logo" />
               shirin_nh8
             </Link>
+            <Link
+              href="https://mail:shirinnazari.h@gmail.com"
+              target="_blank"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+            >
+              <SiGmail className="w-6 h-6 text-logo" />
+              Shirinnazari.h@gmail.com
+            </Link>
           </div>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 max-w-lg  bg-gradient-to-r from-secondary/10 to-logo/10 rounded-2xl w-full p-12"
+          className="flex flex-col gap-8 max-w-lg  bg-gradient-to-r from-secondary/10 to-logo/10 rounded-2xl w-full p-12 shadow-lg"
         >
           <input
             type="text"
             name="name"
             placeholder="name"
-            className="border-2 border-brand-light p-2 rounded-md "
+            className="border-2 border-brand-light p-3 rounded-md "
             required
           />
           <input
             type="email"
             name="email"
             placeholder="email"
-            className="border-2 border-brand-light p-2 rounded-md "
+            className="border-2 border-brand-light p-3 rounded-md "
             required
           />
           <textarea
             name="message"
             placeholder="your message "
-            className="border-2 border-brand-light p-2 rounded-md"
+            className="border-2 border-brand-light p-3 rounded-md"
             required
           />
           <button
