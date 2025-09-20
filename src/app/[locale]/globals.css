@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
@@ -9,7 +9,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary: #8aa624;
-  --color-green-light:#DBE4C9;
+  --color-green-light: #dbe4c9;
   --color-logo: #90a059;
   --color-warning: #fea405;
   --color-secondary: #ebb328;
@@ -17,31 +17,29 @@
   --color-brand-light: #f3e8ca;
   --color-brand-dark-logo: #667d4f;
   --color-dark-mode: #1e1e1e;
+  --color-dark-footer: #171717;
   --color-primary-50: #79a25c;
   --color-white-500: #e0e0e0;
   /* fontFamily */
---font-inter:inter,sans-serif;
---font-poppins:poppins,sans-serif;
-/* font-size */
---text-xs:0.66rem;
- --text-xs--line-height:calc(1 / 0.66)
- --text-sm:0.77rem;
-  --text-sm--line-height:calc(1 / 0.77)
-  --text-base: 1rem;
+  --font-inter: inter, sans-serif;
+  --font-poppins: poppins, sans-serif;
+  /* font-size */
+  --text-xs: 0.66rem;
+  --text-xs--line-height: calc(1 / 0.66) --text-sm: 0.77rem;
+  --text-sm--line-height: calc(1 / 0.77) --text-base: 1rem;
   --text-base--line-height: calc(1.5 / 1);
-   --text-lg: 1.127rem;
+  --text-lg: 1.127rem;
   --text-lg--line-height: calc(1.75 / 1.127);
   --text-xl: 1.556rem;
   --text-xl--line-height: calc(1.75 / 1.556);
   --text-2xl: 1.944rem;
   --text-2xl--line-height: calc(2 / 1.944);
-   --text-3xl:2.44rem;
+  --text-3xl: 2.44rem;
   --text-3xl--line-height: calc(2.25 / 2.44);
-   --text-4xl: 3.056rem;
-  --text-4xl--line-height: calc(2.50/ 3.056);
-   --text-5xl:3.833rem;
+  --text-4xl: 3.056rem;
+  --text-4xl--line-height: calc(2.5 / 3.056);
+  --text-5xl: 3.833rem;
   --text-5xl--line-height: calc(2.75 / 3.833);
-  
 }
 @layer base {
   [data-theme='light'] {
@@ -52,25 +50,32 @@
   }
 }
 
-.ticker{
+.ticker {
   position: relative;
 }
-.ticker__track{
+.ticker__track {
   display: flex;
   align-items: center;
   gap: 2.25rem;
   width: max-content;
-  animation:scroll var(--dur,28s) linear infinite;
+  animation: scroll var(--dur, 28s) linear infinite;
 }
-.ticker__item{list-style: none;}
-.group:hover .ticker__track{
+.ticker__item {
+  list-style: none;
+}
+.group:hover .ticker__track {
   animation-play-state: paused;
 }
-@keyframes scroll{
-  from {transform: translateX(0);}
-  to {transform: translateX(-50%);}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ticker__track{animation: none;}
+  .ticker__track {
+    animation: none;
+  }
 }
-

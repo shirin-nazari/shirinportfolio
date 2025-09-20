@@ -1,7 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import React, { FormEvent, useState } from 'react';
-import SocialMedia from './SocialMedia';
 import Link from 'next/link';
 import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
@@ -17,18 +16,26 @@ const EmailTemplate = () => {
 
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      body: JSON.stringify({
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message'),
-      }),
-    });
-    setLoading(false);
-    if (res.ok) setStatus('success');
-    else setStatus('error');
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+        }),
+      });
+      setLoading(false);
+      if (res.ok) {
+        setStatus('success');
+        form.reset();
+      } else setStatus('error');
+    } catch (err) {
+      setStatus('error');
+    } finally {
+      setLoading(false);
+      setTimeout(() => setStatus(null), 8000);
+    }
   };
   return (
     <div className="w-full h-full  py-20 flex flex-col items-center space-y-16 flex-wrap md:flex-nowrap">
@@ -70,7 +77,7 @@ const EmailTemplate = () => {
               shirin_nh8
             </Link>
             <Link
-              href="https://mail:shirinnazari.h@gmail.com"
+              href="mailto:shirinnazari.h@gmail.com"
               target="_blank"
               className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
             >
@@ -109,28 +116,27 @@ const EmailTemplate = () => {
             className="bg-brand-dark-logo text-white py-2 rounded-md"
           >
             {loading ? 'Sending..' : 'Send'}
-          </button>
-        </form>
+          </button>{' '}
+          {status === 'success' && (
+            <div
+              className="w-full p-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+              role="alert"
+            >
+              <span className="font-medium">Success!</span> Your message has
+              been sent successfully🎉
+            </div>
+          )}
+          {status === 'error' && (
+            <div
+              className="w-full p-4  text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+              role="alert"
+            >
+              <span className="font-medium">Error!</span>Something went
+              wrong,Please try again.
+            </div>
+          )}
+        </form>{' '}
       </div>
-
-      {status === 'success' && (
-        <div
-          className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
-          role="alert"
-        >
-          <span className="font-medium">Success!</span> Your message has been
-          sent successfully🎉
-        </div>
-      )}
-      {status === 'error' && (
-        <div
-          className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-          role="alert"
-        >
-          <span className="font-medium">Error!</span>Something went wrong,Please
-          try again.
-        </div>
-      )}
     </div>
   );
 };

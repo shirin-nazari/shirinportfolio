@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import movie from '@/public/image1.png';
 import game from '@/public/image2.png';
