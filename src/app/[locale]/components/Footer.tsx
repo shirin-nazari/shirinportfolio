@@ -24,7 +24,7 @@ export default function Footer() {
     });
   };
   return (
-    <footer className="w-full bg-green-light dark:bg-dark-footer py-6 mt-12 flex flex-row items-center">
+    <footer className="w-full bg-green-light dark:bg-dark-footer py-6 mt-6 md:mt-12  flex flex-row items-center">
       {visible && (
         <button
           onClick={scrollToTop}

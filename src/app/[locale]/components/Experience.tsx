@@ -16,12 +16,12 @@ const Experience = () => {
       >
         {t('name')}
       </motion.h2>
-      <div className=" pt-10 ">
+      <div className=" pt-10 m-4 md:m-1 ">
         <div className="flex justify-between items-center flex-wrap">
           <h4 className="font-bold text-lg ">{t('nameAndJob')}</h4>
           <h5>{t('time')}</h5>
         </div>
-        <ul className="list-disc  h-full text-lg leading-12 p-6">
+        <ul className="list-disc h-full text-lg leading-12 p-6 ">
           {paragraph.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
