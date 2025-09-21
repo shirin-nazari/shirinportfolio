@@ -32,6 +32,7 @@ const EmailTemplate = () => {
       } else setStatus('error');
     } catch (err) {
       setStatus('error');
+      console.error(err);
     } finally {
       setLoading(false);
       setTimeout(() => setStatus(null), 8000);
