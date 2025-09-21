@@ -29,7 +29,10 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center w-full h-full space-y-32">
+    <div
+      id="project"
+      className="flex flex-col items-center w-full h-full space-y-32"
+    >
       <h4 className="font-bold text-2xl">{t('name')}</h4>
       <div className="flex flex-wrap gap-4 md:flex-nowrap w-full  justify-evenly items-center">
         {items.map((item, index) => (

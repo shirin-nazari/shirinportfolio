@@ -13,7 +13,10 @@ export const Hero = () => {
   const direction = locale === 'en' ? 'ltr' : 'rtl';
 
   return (
-    <div className="flex items-center w-full min-h-lvh justify-center space-x-2 md:space-x-11 flex-wrap-reverse ">
+    <div
+      id="aboutme"
+      className="flex items-center w-full min-h-lvh justify-center space-x-2 md:space-x-11 flex-wrap-reverse "
+    >
       <div className="w-fit p-8 md:px-2">
         {' '}
         <h2 className="text-secondary font-bold">{t('name')}</h2>

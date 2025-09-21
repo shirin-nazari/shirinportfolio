@@ -17,7 +17,6 @@ export default function Footer() {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  console.log(visible);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

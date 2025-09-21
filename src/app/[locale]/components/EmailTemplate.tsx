@@ -38,7 +38,10 @@ const EmailTemplate = () => {
     }
   };
   return (
-    <div className="w-full h-full  py-20 flex flex-col items-center space-y-16 flex-wrap md:flex-nowrap">
+    <div
+      id="contact"
+      className="w-full h-full  py-20 flex flex-col items-center space-y-16 flex-wrap md:flex-nowrap"
+    >
       <h4 className="font-bold text-2xl">{t('name')}</h4>
       <div className="w-full h-full flex justify-evenly flex-wrap md:flex-nowrap">
         <div className="w-lg">
