@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter, usePathname } from '@/src/i18n/navigation';
 import { useTransition } from 'react';
 
@@ -11,22 +11,32 @@ const LanguageSwitcher = ({ className, classNameChild }: ClassNameProps) => {
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState<'fa' | 'en'>('en');
 
+  useEffect(() => {
+    const stored = localStorage.getItem('i18nextLng') as 'fa' | 'en' | null;
+    if (stored) {
+      setSelected(stored);
+    } else if (pathname.startsWith('/fa')) {
+      setSelected('fa');
+    } else {
+      setSelected('en');
+    }
+  }, [pathname]);
   function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const locale = e.target.value;
+    const locale = e.target.value as 'fa' | 'en';
+    setSelected(locale);
+    localStorage.setItem('i18nextLng', locale);
+
     startTransition(() => {
       router.replace({ pathname }, { locale });
     });
-    setSelected(locale);
-    localStorage.setItem('i18nextLng', selected);
   }
   return (
     <select
       name="locale"
       onChange={onChange}
-      defaultValue={pathname.startsWith('/fa') ? 'fa' : 'en'}
-      // value={selected}
+      value={selected}
       id="language"
       disabled={isPending}
       className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-green-light dark:bg-dark-mode  dark:placeholder-gray-400 dark:text-white-bg dark:focus:ring-green-light `}
