@@ -39,17 +39,20 @@
     "movie": {
       "title": "movies",
       "description": "Built with : React , Redux Toolkit, JavaScript , React Router , Axios , TailwindCss",
-      "link": "https://movies-theta-five.vercel.app/"
+      "link": "https://movies-theta-five.vercel.app/",
+      "github": "https://github.com/shirin-nazari/movies/"
     },
     "game": {
       "title": "game-hub",
-      "description": "Built With : React , TypeScript , Zustand , React Query , Axios , React Router, Framer Motion , Chakra UI",
-      "link": "https://game-hub-five-cyan.vercel.app/"
+      "description": "Built With : React , TypeScript , Zustand , React Query , Axios , React Router, Framer Motion ",
+      "link": "https://game-hub-five-cyan.vercel.app/",
+      "github": "https://github.com/shirin-nazari/game-hub/"
     },
     "gym": {
       "title": "evogym",
       "description": "Built with : React , TypeScript , TailwindCss , Framer Motion , React Hook",
-      "link": "https://gym-typescript-ten-henna.vercel.app/"
+      "link": "https://gym-typescript-ten-henna.vercel.app/",
+      "github": "https://github.com/shirin-nazari/gym-typescript/"
     }
   },
   "Contact": {

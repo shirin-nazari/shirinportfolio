@@ -1,15 +1,18 @@
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { ImLink } from 'react-icons/im';
 
 interface PropsCard {
   children: ReactNode;
   src: StaticImageData;
   title: string;
   href: string;
+  hrefGithub: string;
 }
 
-const Cards = ({ children, src, title, href }: PropsCard) => {
+const Cards = ({ children, src, title, href, hrefGithub }: PropsCard) => {
   return (
     <div className="max-w-sm h-full rounded-2xl overflow-hidden blur-in-3xl shadow-lg">
       <Image
@@ -20,13 +23,27 @@ const Cards = ({ children, src, title, href }: PropsCard) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className=" text-base">{children}</p>
-        <Link
-          href={href}
-          target="_blank"
-          className="text-primary text-lg font-bold"
-        >
-          {title}
-        </Link>
+
+        <button className=" bg-brand-light p-2 px-4 my-2 rounded-2xl shadow-md dark:bg-dark-footer">
+          <Link
+            href={href}
+            target="_blank"
+            className="text-brand-dark-logo text-lg font-bold flex justify-baseline gap-2 items-center"
+          >
+            <ImLink className="text-blue-500 text-xl" /> Live Demo
+          </Link>
+        </button>
+
+        <button className="bg-brand-light p-2 px-4 m-2 rounded-2xl shadow-md dark:bg-dark-footer">
+          <Link
+            target="_blank"
+            className="text-brand-dark-logo text-lg font-bold flex justify-baseline gap-2 items-center"
+            href={hrefGithub}
+          >
+            <FaGithub className="text-purple-500/80 text-xl" />
+            GitHub
+          </Link>
+        </button>
       </div>
     </div>
   );

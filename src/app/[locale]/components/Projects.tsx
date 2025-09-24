@@ -14,18 +14,21 @@ const Projects = () => {
       description: t('movie.description'),
       link: t('movie.link'),
       src: movie,
+      linkGithub: t('movie.github'),
     },
     {
       title: t('game.title'),
       description: t('game.description'),
       link: t('game.link'),
       src: game,
+      linkGithub: t('game.github'),
     },
     {
       title: t('gym.title'),
       description: t('gym.description'),
       link: t('gym.link'),
       src: gym,
+      linkGithub: t('gym.github'),
     },
   ];
   return (
@@ -41,6 +44,7 @@ const Projects = () => {
             src={item.src}
             title={item.title.toUpperCase()}
             href={item.link}
+            hrefGithub={item.linkGithub}
           >
             {item.description}
           </Cards>

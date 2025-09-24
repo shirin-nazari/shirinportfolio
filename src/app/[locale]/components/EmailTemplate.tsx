@@ -98,20 +98,20 @@ const EmailTemplate = () => {
             type="text"
             name="name"
             placeholder="name"
-            className="border-2 border-brand-light p-3 rounded-md "
+            className="border-2 border-brand-light p-3 rounded-md focus:outline-none"
             required
           />
           <input
             type="email"
             name="email"
             placeholder="email"
-            className="border-2 border-brand-light p-3 rounded-md "
+            className="border-2 border-brand-light p-3 rounded-md focus:outline-none"
             required
           />
           <textarea
             name="message"
             placeholder="your message "
-            className="border-2 border-brand-light p-3 rounded-md"
+            className="border-2 border-brand-light p-3 rounded-md focus:outline-none"
             required
           />
           <button
