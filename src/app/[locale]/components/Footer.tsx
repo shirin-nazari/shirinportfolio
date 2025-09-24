@@ -28,7 +28,7 @@ export default function Footer() {
       {visible && (
         <button
           onClick={scrollToTop}
-          className="mx-4 p-2 text-3xl  bg-gradient-to-r from-secondary to-logo  text-white rounded-full shadow hover:bg-brand-dark transition-all"
+          className="mx-4 p-2 text-3xl animate-bounce  bg-gradient-to-r from-secondary to-logo  text-white rounded-full shadow hover:bg-brand-dark transition-all"
         >
           <MdOutlineKeyboardDoubleArrowUp />
         </button>

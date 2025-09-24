@@ -24,23 +24,24 @@ const Cards = ({ children, src, title, href, hrefGithub }: PropsCard) => {
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className=" text-base">{children}</p>
 
-        <button className=" bg-brand-light p-2 px-4 my-2 rounded-2xl shadow-md dark:bg-dark-footer">
+        <button className=" bg-brand-light p-2 px-4 my-2 rounded-2xl shadow-md dark:bg-dark-footer ">
           <Link
             href={href}
             target="_blank"
-            className="text-brand-dark-logo text-lg font-bold flex justify-baseline gap-2 items-center"
+            className="text-brand-dark-logo hover:text-logo text-lg font-bold flex justify-baseline gap-2 items-center"
           >
-            <ImLink className="text-blue-500 text-xl" /> Live Demo
+            <ImLink className="text-blue-500 text-xl hover:text-blue-600" />{' '}
+            Live Demo
           </Link>
         </button>
 
         <button className="bg-brand-light p-2 px-4 m-2 rounded-2xl shadow-md dark:bg-dark-footer">
           <Link
             target="_blank"
-            className="text-brand-dark-logo text-lg font-bold flex justify-baseline gap-2 items-center"
+            className="text-brand-dark-logo hover:text-logo text-lg font-bold flex justify-baseline gap-2 items-center"
             href={hrefGithub}
           >
-            <FaGithub className="text-purple-500/80 text-xl" />
+            <FaGithub className="text-purple-500/80 text-xl hover:text-purple-600/80" />
             GitHub
           </Link>
         </button>

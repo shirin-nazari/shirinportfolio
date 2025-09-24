@@ -34,7 +34,7 @@ export const Hero = () => {
       </div>
       <div className="h-full flex flex-col items-center justify-center  space-y-4">
         <div className="w-fit h-lg rounded-full bg-gradient-to-r from-warning to-logo">
-          <div className="bg-white-bg w-sm h-fit rounded-full m-2 dark:bg-dark-mode">
+          <div className="bg-white-bg w-sm :h-fit rounded-full m-2 dark:bg-dark-mode">
             <Image
               alt="profile"
               src={shirin}

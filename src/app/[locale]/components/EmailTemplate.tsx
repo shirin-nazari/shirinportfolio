@@ -51,41 +51,41 @@ const EmailTemplate = () => {
             <Link
               href="https://www.instagram.com/shirin._.nh/#"
               target="_blank"
-              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20  hover:from-secondary/35 hover:to-logo/35  rounded-2xl w-xs font-semibold p-4"
             >
-              <FaInstagram className="w-6 h-6 text-logo" />
+              <FaInstagram className="w-6 h-6 text-logo hover:text-brand-dark-logo" />
               shirin._.nh
             </Link>
             <Link
               href="https://www.linkedin.com/in/shirin-nazari/"
               target="_blank"
-              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 hover:from-secondary/35 hover:to-logo/35  rounded-2xl w-xs font-semibold p-4"
             >
-              <FaLinkedin className="w-6 h-6 text-logo" />
+              <FaLinkedin className="w-6 h-6 text-logo  hover:text-brand-dark-logo" />
               shirin-nazari
             </Link>
             <Link
               href="https://github.com/shirin-nazari"
               target="_blank"
-              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20  hover:from-secondary/35 hover:to-logo/35  rounded-2xl w-xs font-semibold p-4"
             >
-              <FaGithub className="w-6 h-6 text-logo" />
+              <FaGithub className="w-6 h-6 text-logo  hover:text-brand-dark-logo" />
               shirin-nazari
             </Link>
             <Link
               href="https://t.me/shirin_nh80"
               target="_blank"
-              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20  hover:from-secondary/35 hover:to-logo/35  rounded-2xl w-xs font-semibold p-4"
             >
-              <FaTelegram className="w-6 h-6 text-logo" />
-              shirin_nh8
+              <FaTelegram className="w-6 h-6 text-logo  hover:text-brand-dark-logo" />
+              shirin_nh80
             </Link>
             <Link
               href="mailto:shirinnazari.h@gmail.com"
               target="_blank"
-              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20 rounded-2xl w-xs font-semibold p-4"
+              className="flex gap-8 bg-gradient-to-r from-secondary/20 to-logo/20  hover:from-secondary/35 hover:to-logo/35  rounded-2xl w-xs font-semibold p-4"
             >
-              <SiGmail className="w-6 h-6 text-logo" />
+              <SiGmail className="w-6 h-6 text-logo  hover:text-brand-dark-logo" />
               Shirinnazari.h@gmail.com
             </Link>
           </div>
@@ -98,26 +98,26 @@ const EmailTemplate = () => {
             type="text"
             name="name"
             placeholder="name"
-            className="border-2 border-brand-light p-3 rounded-md focus:outline-none"
+            className="border-2 border-brand-light p-3 rounded-md  focus:outline-blue-200/50"
             required
           />
           <input
             type="email"
             name="email"
             placeholder="email"
-            className="border-2 border-brand-light p-3 rounded-md focus:outline-none"
+            className="border-2 border-brand-light p-3 rounded-md  focus:outline-blue-200/50"
             required
           />
           <textarea
             name="message"
             placeholder="your message "
-            className="border-2 border-brand-light p-3 rounded-md focus:outline-none"
+            className="border-2 border-brand-light p-3 rounded-md  focus:outline-blue-200/50"
             required
           />
           <button
             type="submit"
             disabled={loading}
-            className="bg-brand-dark-logo text-white py-2 rounded-md"
+            className="bg-brand-dark-logo text-white py-2 rounded-md hover:font-semibold hover:bg-logo"
           >
             {loading ? 'Sending..' : 'Send'}
           </button>{' '}
