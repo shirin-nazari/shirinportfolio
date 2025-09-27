@@ -47,7 +47,7 @@ const EmailTemplate = () => {
       <div className="w-full h-full flex justify-evenly flex-wrap md:flex-nowrap ">
         <div className="w-lg m-4 md:m-1">
           <p className="font-semibold">{t('description')}</p>
-          <div className="flex flex-col gap-4 py-2">
+          <div className="flex flex-col gap-4 py-2 items-center md:items-baseline">
             <Link
               href="https://www.instagram.com/shirin._.nh/#"
               target="_blank"
@@ -92,7 +92,7 @@ const EmailTemplate = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-8 max-w-lg  bg-gradient-to-r from-secondary/10 to-logo/10 rounded-2xl w-full p-12 shadow-lg"
+          className="flex flex-col gap-8 max-w-lg  bg-gradient-to-r from-secondary/10 to-logo/10 rounded-2xl min-w-sm md:w-full p-12 shadow-lg"
         >
           <input
             type="text"

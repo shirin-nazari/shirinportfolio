@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import React from 'react';
 
 const NavLinks = () => {
@@ -14,12 +13,12 @@ const NavLinks = () => {
     <ul className="flex justify-evenly w-sm font-bold text-sm items-center text-dark-mode  dark:text-white-bg ">
       {links.map((link) => (
         <li key={link.href}>
-          <Link
+          <a
             href={link.href}
             className="cursor-pointer  hover:text-brand-dark-logo"
           >
             {link.label}
-          </Link>
+          </a>
         </li>
       ))}
     </ul>

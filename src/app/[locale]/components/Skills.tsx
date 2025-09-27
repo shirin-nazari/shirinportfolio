@@ -25,7 +25,7 @@ function Skills() {
     <div className=" w-full flex flex-col items-center py-12">
       <h4 className="font-bold text-secondary text-2xl pb-10">{t('name')}</h4>
 
-      <div className="flex size-full items-center justify-center gap-10 backdrop-blur-3xl bg-secondary/4">
+      <div className="flex size-full items-center justify-center gap-10 backdrop-blur-3xl ">
         <Marquee
           direction="left"
           className="w-full h-full gap-4 z-10 [direction:ltr]"
