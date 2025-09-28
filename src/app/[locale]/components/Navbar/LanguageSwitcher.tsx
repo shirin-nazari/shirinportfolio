@@ -24,7 +24,7 @@ const LanguageSwitcher = ({ className, classNameChild }: ClassNameProps) => {
     }
   }, [pathname]);
   function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const locale = e.target.value as 'fa' | 'en';
+    const locale = e.target.value as 'en' | 'fa';
     setSelected(locale);
     localStorage.setItem('i18nextLng', locale);
 
@@ -40,7 +40,6 @@ const LanguageSwitcher = ({ className, classNameChild }: ClassNameProps) => {
       id="language"
       disabled={isPending}
       className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-green-light dark:bg-dark-mode  dark:placeholder-gray-400 dark:text-white-bg dark:focus:ring-green-light `}
-      // className={`border-none rounded-lg p-3 outline-none ${className}  text-sm text-dark-mode  bg-transparent focus:ring-transparent dark:bg-transparent  dark:placeholder-gray-400 dark:text-white-bg  dark:focus:ring-green-light `}
     >
       <option
         value="en"

@@ -2,7 +2,6 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
-// import shirin from '@/public/shirin-nazari-bg.jpg';
 import shirin from '@/public/shirin-nazari.png';
 import SocialMedia from './SocialMedia';
 
@@ -41,11 +40,6 @@ export const Hero = () => {
               className="h-sm w-sm  rounded-full z-20"
             />
           </div>
-          {/* <Image
-          alt="profile"
-          src={shirin}
-          className="h-sm w-sm  rounded-full p-2"
-        /> */}
         </div>
         <SocialMedia />
       </div>
