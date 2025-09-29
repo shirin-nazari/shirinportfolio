@@ -12,9 +12,9 @@ const MobileNavbar = () => {
 
   const links = [
     { href: '/', label: t('home') },
-    { href: '/about-me', label: t('about-me') },
-    { href: '/project', label: t('project') },
-    { href: '/contact', label: t('contact') },
+    { href: '#about-me', label: t('about-me') },
+    { href: '#project', label: t('project') },
+    { href: '#contact', label: t('contact') },
   ];
 
   return (

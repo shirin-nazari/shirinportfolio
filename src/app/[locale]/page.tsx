@@ -1,3 +1,4 @@
+'use client';
 import Education from './components/Education';
 import EmailTemplate from './components/EmailTemplate';
 import Experience from './components/Experience';
