@@ -26,8 +26,8 @@ const Navbar = () => {
         <NavLinks />
         <ThemeToggle />
         <Link
-          href="/cv.pdf"
           download="cv-shirin-nazari"
+          href="/cv.pdf"
           className="bg-warning p-2 text-white-bg font-bold rounded-lg cursor-pointer mx-1 hover:bg-warning/85  "
         >
           Download Cv
